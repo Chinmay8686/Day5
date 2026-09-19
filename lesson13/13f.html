@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tweet Post Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .tweet-card {
+      display: flex;
+      gap: 12px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .profile-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .tweet-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .display-name {
+      font-weight: bold;
+      font-size: 15px;
+      color: #0f0f0f;
+    }
+
+    .handle {
+      font-size: 14px;
+      color: #536471;
+    }
+
+    .tweet-text {
+      font-size: 15px;
+      line-height: 1.35;
+      color: #0f0f0f;
+      margin-bottom: 12px;
+    }
+
+    .link-preview {
+      display: flex;
+      border: 1px solid #cfd9de;
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .preview-thumbnail {
+      width: 110px;
+      height: 100px;
+      object-fit: cover;
+      background-color: #d0d0d0;
+      flex-shrink: 0;
+    }
+
+    .preview-info {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #ffffff;
+      flex: 1;
+    }
+
+    .preview-domain {
+      font-size: 13px;
+      color: #536471;
+      margin-bottom: 4px;
+    }
+
+    .preview-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: #0f0f0f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tweet-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIW1JpNBi7MF-5ub-CGj8ksBtVJcbyE82V_XfX9NcNBg&s=10" alt="Profile Picture" class="profile-avatar">
+
+    <div class="tweet-content">
+      <div class="user-info">
+        <span class="display-name">supersimple.dev</span>
+        <span class="handle">@SuperSimpleDev</span>
+      </div>
+
+      <p class="tweet-text">
+        What is backend web development? A complete overview. New video is up!
+      </p>
+
+      <a href="https://youtube.com" target="_blank" class="link-preview">
+        <img src="" alt="Video Thumbnail" class="preview-thumbnail">
+        <div class="preview-info">
+          <span class="preview-domain">youtube.com</span>
+          <div class="preview-title">
+            Backend web development - a complete overview (2021)
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
