@@ -1,0 +1,366 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, Arial, sans-serif;
+    }
+
+    body {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+
+    /* =========================================
+       SIDEBAR
+       ========================================= */
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+
+      width: 72px;
+      height: 100vh;
+
+      background-color: white;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding-top: 70px;
+
+      z-index: 100;
+    }
+
+    .sidebar-link {
+      width: 64px;
+      height: 74px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+      color: #0f0f0f;
+
+      font-size: 10px;
+
+      margin-bottom: 5px;
+
+      border-radius: 8px;
+    }
+
+    .sidebar-link:hover {
+      background-color: #eeeeee;
+    }
+
+    .sidebar-icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-text {
+      font-size: 10px;
+    }
+
+
+    /* =========================================
+       VIDEO GRID
+       ========================================= */
+
+    .video-grid {
+      display: grid;
+
+      grid-template-columns: repeat(1, 1fr);
+
+      column-gap: 16px;
+      row-gap: 40px;
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================
+       SCREEN BREAKPOINTS
+       ========================================= */
+
+    @media (min-width: 600px) {
+
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (min-width: 900px) {
+
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    }
+
+
+    /* =========================================
+       VIDEO ITEM CARD
+       ========================================= */
+
+    .video-preview {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* =========================================
+       THUMBNAIL
+       ========================================= */
+
+    .thumbnail-row {
+      position: relative;
+
+      margin-bottom: 12px;
+
+      width: 100%;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+    }
+
+    .thumbnail {
+      width: 100%;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+
+      display: block;
+
+      background-color: #cccccc;
+
+      border-radius: 12px;
+
+      transition: transform 0.2s ease;
+    }
+
+    .thumbnail-row:hover .thumbnail {
+      transform: scale(1.02);
+    }
+
+
+    /* =========================================
+       VIDEO TIME
+       ========================================= */
+
+    .video-time {
+      position: absolute;
+
+      bottom: 8px;
+      right: 8px;
+
+      background-color: rgba(0, 0, 0, 0.8);
+
+      color: #ffffff;
+
+      font-size: 12px;
+
+      font-weight: 500;
+
+      padding: 3px 5px;
+
+      border-radius: 4px;
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================
+       VIDEO INFORMATION
+       ========================================= */
+
+    .video-info-grid {
+      display: grid;
+
+      grid-template-columns: 36px 1fr;
+
+      column-gap: 12px;
+    }
+
+
+    /* =========================================
+       CHANNEL PROFILE
+       ========================================= */
+
+    .channel-picture {
+      width: 36px;
+      height: 36px;
+    }
+
+    .profile-picture {
+      width: 36px;
+      height: 36px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      background-color: #dddddd;
+
+      display: block;
+    }
+
+
+    /* =========================================
+       LINKS
+       ========================================= */
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .video-title-link {
+      display: inline-block;
+    }
+
+
+    /* =========================================
+       VIDEO TITLE
+       ========================================= */
+
+    .video-title {
+      font-size: 14px;
+
+      font-weight: 600;
+
+      line-height: 20px;
+
+      color: #0f0f0f;
+
+      margin-bottom: 6px;
+
+      display: -webkit-box;
+
+      -webkit-box-orient: vertical;
+
+      overflow: hidden;
+    }
+
+
+    .video-author {
+      font-size: 12px;
+
+      color: #606060;
+
+      margin-bottom: 2px;
+    }
+
+    .video-stats {
+      font-size: 12px;
+
+      color: #606060;
+    }
+
+
+    /* =========================================
+       EXERCISE 17a
+       ========================================= */
+
+    @media (min-width: 1000px) {
+
+      .video-title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .video-author,
+      .video-stats {
+        font-size: 14px;
+      }
+
+    }
+
+
+    /* =========================================
+       SIDEBAR - SMALL SCREENS
+       max-width: 1200px
+       ========================================= */
+
+    @media (max-width: 1200px) {
+
+      .sidebar {
+        width: 72px;
+      }
+
+      .sidebar-text {
+        display: block;
+      }
+
+      .video-grid {
+        margin-left: 80px;
+      }
+
+    }
+
+
+    /* =========================================
+       SIDEBAR - LARGE SCREENS
+       min-width: 1200.1px
+       ========================================= */
+
+    @media (min-width: 1200.1px) {
+
+      .sidebar {
+        width: 220px;
+
+        align-items: flex-start;
+
+        padding: 70px 12px 20px;
+      }
+
+      .sidebar-link {
+        width: 100%;
+
+        height: 50px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 25px;
+
+        padding-left: 20px;
+
+        font-size: 14px;
+
+        margin-bottom: 5px;
+      }
+
+      .sidebar-icon {
+        width: 25px;
+
+        font-size: 22px;
+
+        margin-bottom: 0;
+      }
+
+      .sidebar-text {
+        font-size: 14px;
+      }
+
+      .video-grid {
+        max-width: none;
+
+        margin-left: 240px;
+
+        margin-right: 20px;
+      }
+
+    }
